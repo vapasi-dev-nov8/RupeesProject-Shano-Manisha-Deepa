@@ -3,24 +3,31 @@ package com.rupee.test;
 import com.rupee.Rupee;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class RupeeTest {
 
     @Test
-    void testForAddingRupeeValue(){
+    void addingRupeeValue(){
         Rupee rupeeValue1=new Rupee(5);
         Rupee rupeeValue2=new Rupee(2);
-        int actualResult=rupeeValue1.addRupees(rupeeValue2);
-        assertEquals(7, actualResult);
+        Rupee actualResult=rupeeValue1.add(rupeeValue2);
+        assertEquals(new Rupee(7).getRupeeValue() ,actualResult.getRupeeValue());
     }
 
     @Test
-    void testForComparingRupeeValue(){
+    void comparingEqualRupeeValue(){
         Rupee rupeeValue1=new Rupee(7);
         Rupee rupeeValue2=new Rupee(7);
-        boolean actualResult=rupeeValue1.compareRupees(rupeeValue2);
+        boolean actualResult=rupeeValue1.equals(rupeeValue2);
         assertTrue(actualResult);
+    }
+
+    @Test
+    void comparingNonEqualRupeeValue(){
+        Rupee rupeeValue1=new Rupee(17);
+        Rupee rupeeValue2=new Rupee(7);
+        boolean actualResult=rupeeValue1.equals(rupeeValue2);
+        assertFalse(actualResult);
     }
 }
