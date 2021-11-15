@@ -8,14 +8,13 @@ public class Rupee {
         this.rupeeValue = rupeeValue;
     }
 
-
-    public int addRupees(Rupee twoRupee) {
-        return rupeeValue + twoRupee.rupeeValue;
+    public int addRupees(Rupee rupee) {
+        return this.rupeeValue + rupee.rupeeValue;
     }
 
-
-
-    public int compareRupees(Rupee sevenRupee) {
-        return rupeeValue;
+    public boolean compareRupees(Rupee rupee) {
+        if (this.rupeeValue == rupee.rupeeValue)
+            return true;
+        return false;
     }
 }
