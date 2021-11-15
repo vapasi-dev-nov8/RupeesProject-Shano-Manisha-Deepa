@@ -11,12 +11,7 @@ public class Rupee {
     }
 
     public Rupee add(Rupee rupee) {
-        rupeeValue = this.rupeeValue + rupee.rupeeValue;
-        return new Rupee(rupeeValue);
-    }
-
-    public int getRupeeValue() {
-        return rupeeValue;
+        return new Rupee(this.rupeeValue + rupee.rupeeValue);
     }
 
     @Override

@@ -12,11 +12,12 @@ public class RupeeTest {
         Rupee rupeeValue1=new Rupee(5);
         Rupee rupeeValue2=new Rupee(2);
         Rupee actualResult=rupeeValue1.add(rupeeValue2);
-        assertEquals(new Rupee(7).getRupeeValue() ,actualResult.getRupeeValue());
+        assertEquals(new Rupee(7) ,actualResult);
+
     }
 
     @Test
-    void comparingEqualRupeeValue(){
+    void equalRupeeValue(){
         Rupee rupeeValue1=new Rupee(7);
         Rupee rupeeValue2=new Rupee(7);
         boolean actualResult=rupeeValue1.equals(rupeeValue2);
@@ -24,7 +25,7 @@ public class RupeeTest {
     }
 
     @Test
-    void comparingNonEqualRupeeValue(){
+    void nonEqualRupeeValue(){
         Rupee rupeeValue1=new Rupee(17);
         Rupee rupeeValue2=new Rupee(7);
         boolean actualResult=rupeeValue1.equals(rupeeValue2);
